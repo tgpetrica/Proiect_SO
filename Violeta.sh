@@ -18,10 +18,10 @@ fisier_intrare="$1"
 fisier_temporar=$(mktemp)
 
 sort "$fisier_intrare" | uniq > "$fisier_temporar"
-echo "Prenume sterse:"
+echo "Prenume duplicate  au fost sterse cu succes."
 
 awk '{ if (++count[$0] == 2) print $0
                                       }' "$fisier_intrare"
 mv "$fisier_temporar" "$fisier_intrare"
-echo "Prenumele duplicate au fost sterse cu succes din $fisier_intrare"
+echo "Prenumele ce se regasesc in fisierul $fisier_intrare dupa executia scriptului sunt:"
 cat "$fisier_intrare"

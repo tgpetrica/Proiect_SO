@@ -18,17 +18,22 @@ if [ ! -f "$1" ]
       exit 1
 fi
 
-while IFS= read -r prenume || [[ -n $prenume ]]
+while IFS= read -r prenume 
      do
        prenume=$(echo "$prenume" | xargs)
+     if [ -z "$prenume" ]
+       then
+          continue
+     fi
+
        lungime=${#prenume}
 
-     if [ $((lungime % 2 )) -eq 0 ]
+     if [ $(( lungime % 2 )) -eq 0 ]
        then
-           prenume_par=$((prenume_par + 1 ))
+           prenume_par=$((prenume_par + 1))
            prenume_par_lista+=("$prenume")
      else
-           prenume_impar=$((prenume_impar + 1 ))
+           prenume_impar=$((prenume_impar + 1))
            prenume_impar_lista+=("$prenume")
      fi
 done < "$1"
