@@ -3,10 +3,10 @@
 _DIR=$(dirname "$0")
 
 echo "Introdu numarul comenzii: "
-echo "1 Sterge prenumele care se repeta. (Violeta)"
-echo "2 Ordoneaza crescator dupa numar litere. (Diana)"
-echo "3 Sortare dupa numar litere pare/impare (Andreea)"
-echo "4 Transforma minuscule in MAJUSCULE. (Daria)"
+echo "1 Sterge prenumele care se repeta.        (Violeta)"
+echo "2 Ordoneaza crescator dupa numar litere.  (Diana)"
+echo "3 Sortare dupa numar litere pare/impare   (Andreea)"
+echo "4 Transforma minuscule in MAJUSCULE.      (Daria)"
 read -p "Introdu numarul comenzii: " comanda
 
 case $comanda in
