@@ -5,7 +5,7 @@ _DIR=$(dirname "$0")
 echo " << MENIU >> "
 echo "1 Sterge prenumele care se repeta.            (Violeta)"
 echo "2 Ordoneaza descrescator dupa numar litere.   (Diana)"
-echo "3 Sortare dupa numar litere pare/impare       (Andreea)"
+echo "3 Numarare litere pare/impare si afisare.     (Andreea)"
 echo "4 Transforma minuscule in MAJUSCULE.          (Daria)"
 read -p "Introdu numarul comenzii: " comanda
 
